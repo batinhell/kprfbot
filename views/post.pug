@@ -1,0 +1,126 @@
+extends layout
+
+block content
+  body.home
+    #fb-root
+    header
+      .header-top
+        .container.clearfix
+          .header-social
+            a(href='')
+              i.fa.fa-facebook(aria-hidden='true')
+            a(href='')
+              i.fa.fa-vk(aria-hidden='true')
+            a(href='')
+              i.fa.fa-instagram(aria-hidden='true')
+            a(href='')
+              i.fa.fa-twitter(aria-hidden='true')
+            a(href='')
+              i.fa.fa-telegram(aria-hidden='true')
+            a(href='')
+              i.fa.fa-youtube-play(aria-hidden='true')
+            a(href='')
+              i.fa.fa-odnoklassniki(aria-hidden='true')
+          |  
+          a.logo(href='/') &Acy;&ncy;&dcy;&rcy;&iecy;&jcy; &Kcy;&lcy;&ycy;&chcy;&kcy;&ocy;&vcy;
+          .menu-burger
+            span
+            span
+            span
+        .mobile-menu
+          .container
+            .header-social
+              a(href='')
+                i.fa.fa-facebook(aria-hidden='true')
+              a(href='')
+                i.fa.fa-vk(aria-hidden='true')
+              a(href='')
+                i.fa.fa-instagram(aria-hidden='true')
+              a(href='')
+                i.fa.fa-twitter(aria-hidden='true')
+              a(href='')
+                i.fa.fa-telegram(aria-hidden='true')
+              a(href='')
+                i.fa.fa-youtube-play(aria-hidden='true')
+              a(href='')
+                i.fa.fa-odnoklassniki(aria-hidden='true')
+            nav
+              ul.clearfix
+                li
+                  a(href='index.html') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+                li
+                  a(href='biography.html') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+                li
+                  a(href='volunteers.html') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+                li
+                  a(href='support.html') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+                li
+                  a(href='contacts.html') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+      .header-bottom
+        .container.clearfix
+          nav
+            ul.clearfix
+              li.active
+                a(href='index.html') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+              li
+                a(href='biography.html') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+              li
+                a(href='volunteers.html') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+              li
+                a(href='support.html') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+              li.photo
+                a(href='index.html')
+                  img(src='images/img-1.png')
+              li
+                a(href='contacts.html') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+    main
+      section.container.clearfix
+        section.main-contant
+          article.post-item
+            a.post-item-title(href='single.html') #{posts.title}
+            .post-item-top.clearfix
+              .post-item-top-data
+                data(value='19.03.2017') 19.03.2017
+                |  
+                span ,
+                |  
+                time 15:24
+              .view 921
+            .contant
+              #{posts.content}
+            hr
+        aside
+          .search
+            form.clearfix
+              input(type='text', name='search', placeholder='Поиск')
+              |  
+              input(type='submit')
+          .aside-news
+            .post-item-title &Scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &iecy;&shchcy;&iecy;
+            .aside-post-item
+              a(href='single.html') &Vcy;&ocy;&tcy; &ocy;&ncy;&icy;, &scy;&acy;&mcy;&ycy;&iecy; &scy;&tcy;&rcy;&acy;&shcy;&ncy;&ycy;&iecy; &lcy;&yucy;&dcy;&icy; &dcy;&lcy;&yacy; &kcy;&ocy;&rcy;&rcy;&ucy;&pcy;&tscy;&icy;&ocy;&ncy;&iecy;&rcy;&ocy;&vcy; &scy;&tcy;&rcy;&acy;&ncy;&ycy;. &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&icy;&iecy;...
+              .post-item-top.clearfix
+                .post-item-top-data
+                  data(value='19.03.2017') 19.03.2017
+                  |  
+                  span ,
+                  |  
+                  time 15:24
+            .aside-post-item
+              a(href='single.html') &Vcy;&ocy;&tcy; &ocy;&ncy;&icy;, &scy;&acy;&mcy;&ycy;&iecy; &scy;&tcy;&rcy;&acy;&shcy;&ncy;&ycy;&iecy; &lcy;&yucy;&dcy;&icy; &dcy;&lcy;&yacy; &kcy;&ocy;&rcy;&rcy;&ucy;&pcy;&tscy;&icy;&ocy;&ncy;&iecy;&rcy;&ocy;&vcy; &scy;&tcy;&rcy;&acy;&ncy;&ycy;. &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&icy;&iecy;...
+              .post-item-top.clearfix
+                .post-item-top-data
+                  data(value='19.03.2017') 19.03.2017
+                  |  
+                  span ,
+                  |  
+                  time 15:24
+            .aside-post-item
+              a(href='single.html') &Vcy;&ocy;&tcy; &ocy;&ncy;&icy;, &scy;&acy;&mcy;&ycy;&iecy; &scy;&tcy;&rcy;&acy;&shcy;&ncy;&ycy;&iecy; &lcy;&yucy;&dcy;&icy; &dcy;&lcy;&yacy; &kcy;&ocy;&rcy;&rcy;&ucy;&pcy;&tscy;&icy;&ocy;&ncy;&iecy;&rcy;&ocy;&vcy; &scy;&tcy;&rcy;&acy;&ncy;&ycy;. &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&icy;&iecy;...
+              .post-item-top.clearfix
+                .post-item-top-data
+                  data(value='19.03.2017') 19.03.2017
+                  |  
+                  span ,
+                  |  
+                  time 15:24

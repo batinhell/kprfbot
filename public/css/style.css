@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "GothamProBold";
+    src: url("../fonts/GothamProBold/GothamProBold.eot");
+    src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+    url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+html{
+    height:100%;
+}
+body{
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+    min-height: 100%;
+    height:100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+header{
+    overflow: hidden;
+}
+header .header-top{
+    padding-bottom: 18px;
+    padding-top: 45px;
+}
+header a.logo{
+    float: left;
+    color: #000;
+    margin-left: 22px;
+    font-size: 24px;
+    line-height: 26px;
+    font-family: "GothamProBold";
+    text-transform: uppercase;
+}
+header .header-social{
+    float: left;
+}
+header .header-social a{
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    margin-right: 30px;
+    border-radius: 100%;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    background: #b81515;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .4s;
+}
+header .header-social a:hover{
+    opacity:.7;
+}
+.header-bottom nav{
+    float: right;
+    margin-right: 36px;
+    height: 100%;
+    display: table;
+}
+.header-bottom nav ul{
+    display: table-cell;
+    vertical-align: middle;
+}
+header nav ul li.photo a{
+    bottom: -60px;
+    position: absolute;
+}
+header nav ul li.photo a:hover{
+    opacity: 1;
+}
+header nav ul li.photo{
+    width: 150px;
+}
+header nav ul li{
+    float: left;
+    min-height: 1px;
+    position: relative;
+    margin-left: 50px;
+}
+header nav ul li a{
+    color: #fff;
+    font-weight: 500;
+    transition: .4s;
+}
+header nav ul li a:hover, header nav ul li.active a{
+    opacity: .7;
+}
+header .header-bottom{
+    background: #b81515;
+    height:80px;
+}
+header .header-bottom .container{
+    height: 100%;
+}
+.home .post-item:last-child hr{
+    display: none;
+}
+.post-item-title{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    display: block;
+    color: #000;
+    transition: .4s;
+    font-family: "GothamProBold";
+}
+.main-contant img{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 35px;
+}
+.container p{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    padding-bottom: 24px;
+}
+main{
+    padding-top: 52px;
+}
+aside{
+    float: right;
+    width: 292px;
+}
+.post-item-top .post-item-top-data, .post-item-top .view{
+    float: left;
+}
+.post-item-top .view{
+    margin-left: 55px;
+}
+.home .post-item:hover .post-item-title{
+    opacity: .7;
+}
+.post-item-top{
+    margin-bottom: 10px;
+    line-height: 24px;
+    color: #878787;
+    font-weight: 300;
+}
+.main-contant{
+    max-width: 630px;
+    float: left;
+    padding-top: 10px;
+}
+.template-contacts .main-contant{
+    max-width: 100%;
+    float: none;
+}
+.search input[type="text"]{
+    float: left;
+    width:150px;
+}
+.search input[type="submit"]{
+    float: right;
+    margin-right: 38px;
+}
+input[type="text"]{
+    height: 29px;
+    line-height: 25px;
+    text-indent: 15px;
+    border: 2px solid #e8e8e8;
+}
+input[type="submit"]{
+    width: 68px;
+    height: 29px;
+    font-size: 0;
+    line-height: 29px;
+    background: #b81515 url("../images/img-2.png") no-repeat center;
+}
+aside .aside-news{
+    margin-top: 32px;
+}
+aside .aside-news .post-item-title{
+    margin-bottom: 18px;
+}
+aside .aside-news .aside-post-item{
+    margin-bottom: 28px;
+}
+aside .aside-news .aside-post-item a{
+    color: #000;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 8px;
+    transition: .4s;
+}
+aside .aside-news .aside-post-item a:hover{
+    opacity:.6;
+}
+.contant a{
+    color: #b81515;
+    display: block;
+    text-decoration: underline;
+}
+.contant a:hover{
+    text-decoration: none;
+}
+.template-volunteers .main-contant img{
+    padding: 0;
+}
+.template-volunteers .contant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.template-volunteers .contant a{
+    transition: .4s;
+    text-align: center;
+}
+.template-volunteers .contant a:hover{
+    opacity:.8;
+}
+.contant table{
+    width: 100%;
+    margin-bottom: 24px;
+    border: 1px solid;
+}
+.contant table thead{
+    border-bottom: 1px solid;
+    background: #ccc;
+}
+.contant table tr{
+    border-bottom: 1px solid;
+}
+.contant table tr:last-child{
+    border-bottom: 0;
+}
+.contant table td{
+    font-weight: 300;
+    padding: 6px;
+    border-right:1px solid;
+}
+.contant table td:last-child{
+    border-right:0;
+}
+.mobile-menu, .menu-stack-overflow{
+    display: none;
+}
+.menu-burger{
+    display: none;
+}

@@ -1,0 +1,129 @@
+@media screen and (max-width: 1220px) {
+    form#form {
+        width: 100%;
+        margin-left: -15px;
+    }
+    .form-checkout, aside.form .image{
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 992px) {
+    header a.logo{
+        margin-left: 0px;
+        color: #fff;
+    }
+    .container{
+        width: 96%;
+    }
+    aside{
+        display: none;
+    }
+    .main-contant{
+        max-width: 100%;
+        float: none;
+    }
+    header{
+        position: relative;
+        z-index:2;
+    }
+    header .header-social{
+        display: none;
+    }
+    header nav ul li{
+        display: none;
+    }
+    .header-bottom nav{
+        margin-right: 0;
+    }
+    main {
+        padding-top: 12px;
+    }
+    header .header-bottom .container{
+        display: table;
+    }
+    header .mobile-menu nav{
+        float: none;
+        width:100%;
+    }
+    header .mobile-menu nav ul{
+        text-align: center;
+    }
+    header .mobile-menu nav ul li{
+        display: block;
+        margin-left: 0;
+        float: none;
+        margin-bottom: 10px;
+    }
+    header .mobile-menu .header-social{
+        display: block;
+        float: none;
+        text-align: center;
+    }
+    .mobile-menu{
+        position: fixed;
+        width: 100%;
+        background: #b81515;
+        border-top: 1px solid #fff;
+        padding: 8px 0;
+        top: 62px;
+    }
+    .mobile-menu.active{
+        display: block;
+    }
+    .menu-burger{
+        display: table-cell;
+        width: 25px;
+        vertical-align: middle;
+        cursor: pointer;
+        float: right;
+        margin-top: 5px;
+    }
+    header .header-bottom{
+        display: none;
+    }
+    header .header-top{
+        padding-top: 18px;
+        background: #b81515;
+    }
+    .menu-burger span{
+        display: block;
+        height:2px;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 5px;
+    }
+    .header-scroll .mobile-menu{
+        top:0;
+    }
+    header .header-social a{
+        margin: 0 8px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .template-volunteers .contant a{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    header a.logo{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .contant table{
+        font-size: 12px;
+    }
+    .contant table td{
+        padding: 2px;
+    }
+    header .header-top {
+        padding-bottom: 18px;
+        padding-top: 19px;
+    }
+    header a.logo{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 320px){
+
+}

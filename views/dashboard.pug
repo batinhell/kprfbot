@@ -1,0 +1,23 @@
+extends admin
+
+block content
+  nav.navbar.navbar-default.navbar-fixed-top
+    .container
+      p.navbar-text.navbar-right
+        a.navbar-link(href='/logout') Выйти
+
+  .container.post
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title Создать пост
+      .panel-body
+        form
+          .form-group
+            label(for='name') &Ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy;
+            input#name.form-control.title(type='text')
+          .form-group
+            label Контент
+            #editor
+          |  
+          button.btn.btn-default.save-post(type='submit') Сохранить
+        

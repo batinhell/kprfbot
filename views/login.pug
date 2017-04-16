@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  if message
+    h3 #{message}
+  .wrapper
+    form.form-signin(action='/login', method='post')
+      h2.form-signin-heading Dashboard
+      input.form-control(type='text', name='username', placeholder='Email Address', required='', autofocus='')
+      |  
+      input.form-control(type='password', name='password', placeholder='Password', required='')
+      |
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Login
