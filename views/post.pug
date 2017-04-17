@@ -47,7 +47,7 @@ block content
             nav
               ul.clearfix
                 li
-                  a(href='index.html') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+                  a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
                 li
                   a(href='biography.html') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
                 li
@@ -61,23 +61,23 @@ block content
           nav
             ul.clearfix
               li.active
-                a(href='index.html') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+                a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
               li
-                a(href='biography.html') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+                a(href='#') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
               li
-                a(href='volunteers.html') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+                a(href='#') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
               li
-                a(href='support.html') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+                a(href='#') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
               li.photo
-                a(href='index.html')
-                  img(src='images/img-1.png')
+                a(href='#')
+                  img(src='/images/img-1.png')
               li
-                a(href='contacts.html') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+                a(href='#') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
     main
       section.container.clearfix
         section.main-contant
           article.post-item
-            a.post-item-title(href='single.html') #{posts.title}
+            h1.post-item-title #{post.title}
             .post-item-top.clearfix
               .post-item-top-data
                 data(value='19.03.2017') 19.03.2017
@@ -85,10 +85,26 @@ block content
                 span ,
                 |  
                 time 15:24
-              .view 921
-            .contant
-              #{posts.content}
-            hr
+              |  
+              a#view.view(data-xid='page_2') 0
+              #hypercomments_widget2
+            .contant !{post.content}
+            #hypercomments_widget
+            script(type='text/javascript').
+              _hcwp = window._hcwp || [];
+              _hcwp.push({widget:"Stream", widget_id: 88515});
+              _hcwp.push({widget:"Mixstream", widget_id: 88515, xid: "page_2", selector:"#view", label:"{%COUNT%}", hc_disable: 1});
+              (function() {
+              if("HC_LOAD_INIT" in window)return;
+              HC_LOAD_INIT = true;
+              var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "ru").substr(0, 2).toLowerCase();
+              var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+              hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/88515/"+lang+"/widget.js";
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hcc, s.nextSibling);
+              })();
+            |  
+            a.hc-link(href='http://hypercomments.com', title='comments widget') comments powered by HyperComments
         aside
           .search
             form.clearfix

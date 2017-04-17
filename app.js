@@ -79,6 +79,15 @@ app.get('/post', function (req, res, next) {
   });
 });
 
+app.get('/post/:id', function (req, res, next) {
+  Post.findById(req.params.id, function(err, response) {
+    if (err) { 
+      res.status(500).send({error: err})
+    }
+    res.render('post', { post: response });
+  });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
