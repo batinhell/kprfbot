@@ -113,7 +113,7 @@ block content
             .post-item-title &Scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &iecy;&shchcy;&iecy;
             each rpost, index in random
               .aside-post-item
-                a(href="post/" + rpost.id) #{rpost.title}
+                a(href="/post/" + rpost._id) #{rpost.title}
                 .post-item-top.clearfix
                   .post-item-top-data
                     data(value='19.03.2017') #{rpost.date}

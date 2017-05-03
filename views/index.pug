@@ -78,14 +78,14 @@ block content
         section.main-contant
           each post, index in posts
             article.post-item
-              a.post-item-title(href="post/" + post.id) #{post.title}
+              a.post-item-title(href="/post/" + post.id) #{post.title}
               .post-item-top.clearfix
                 .post-item-top-data
                   data(value='19.03.2017') #{post.date}
               .contant 
                 img(src="/" + post.image)
                 | !{post.shortContent}
-                a.post-item-full(href="post/" + post.id) Читать далее
+                a.post-item-full(href="/post/" + post.id) Читать далее
               hr
         aside
           .search
@@ -97,7 +97,7 @@ block content
             .post-item-title &Scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &iecy;&shchcy;&iecy;
             each rpost, index in random
               .aside-post-item
-                a(href="post/" + rpost.id) #{rpost.title}
+                a(href="/post/" + rpost._id) #{rpost.title}
                 .post-item-top.clearfix
                   .post-item-top-data
                     data(value='19.03.2017') #{rpost.date}
