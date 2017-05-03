@@ -69,9 +69,12 @@ app.use('/login', login);
 app.use('/dashboard', dashboard);
 
 app.post('/post', upload.single('image'), function (req, res, next) {
-  req.body.image = req.file.originalname;
+  if (req.file) {
+    req.body.image = req.file.originalname;
+  }
   Post.create(req.body, function(err, response) {
     if (err) { 
+      console.log(err);
       res.status(500).send({error: err})
     }
     res.status(200).send()
@@ -139,6 +142,7 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
+  console.log(err);
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
