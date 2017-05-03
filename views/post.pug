@@ -63,7 +63,7 @@ block content
               li.active
                 a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
               li
-                a(href='#') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+                a(href='/biography') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
               li
                 a(href='#') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
               li
@@ -72,7 +72,7 @@ block content
                 a(href='#')
                   img(src='/images/img-1.png')
               li
-                a(href='#') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+                a(href='/contacts') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
     main
       section.container.clearfix
         section.main-contant
@@ -80,15 +80,13 @@ block content
             h1.post-item-title #{post.title}
             .post-item-top.clearfix
               .post-item-top-data
-                data(value='19.03.2017') 19.03.2017
-                |  
-                span ,
-                |  
-                time 15:24
-              |  
-              a#view.view(data-xid='page_2') 0
+                data(value='19.03.2017') #{post.date}
               #hypercomments_widget2
-            .contant !{post.content}
+            .contant 
+              img(src="/" + post.image)
+              | !{post.shortContent}
+              p
+              | !{post.content}
             #hypercomments_widget
             script(type='text/javascript').
               _hcwp = window._hcwp || [];
@@ -113,30 +111,9 @@ block content
               input(type='submit')
           .aside-news
             .post-item-title &Scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &iecy;&shchcy;&iecy;
-            .aside-post-item
-              a(href='single.html') &Vcy;&ocy;&tcy; &ocy;&ncy;&icy;, &scy;&acy;&mcy;&ycy;&iecy; &scy;&tcy;&rcy;&acy;&shcy;&ncy;&ycy;&iecy; &lcy;&yucy;&dcy;&icy; &dcy;&lcy;&yacy; &kcy;&ocy;&rcy;&rcy;&ucy;&pcy;&tscy;&icy;&ocy;&ncy;&iecy;&rcy;&ocy;&vcy; &scy;&tcy;&rcy;&acy;&ncy;&ycy;. &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&icy;&iecy;...
-              .post-item-top.clearfix
-                .post-item-top-data
-                  data(value='19.03.2017') 19.03.2017
-                  |  
-                  span ,
-                  |  
-                  time 15:24
-            .aside-post-item
-              a(href='single.html') &Vcy;&ocy;&tcy; &ocy;&ncy;&icy;, &scy;&acy;&mcy;&ycy;&iecy; &scy;&tcy;&rcy;&acy;&shcy;&ncy;&ycy;&iecy; &lcy;&yucy;&dcy;&icy; &dcy;&lcy;&yacy; &kcy;&ocy;&rcy;&rcy;&ucy;&pcy;&tscy;&icy;&ocy;&ncy;&iecy;&rcy;&ocy;&vcy; &scy;&tcy;&rcy;&acy;&ncy;&ycy;. &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&icy;&iecy;...
-              .post-item-top.clearfix
-                .post-item-top-data
-                  data(value='19.03.2017') 19.03.2017
-                  |  
-                  span ,
-                  |  
-                  time 15:24
-            .aside-post-item
-              a(href='single.html') &Vcy;&ocy;&tcy; &ocy;&ncy;&icy;, &scy;&acy;&mcy;&ycy;&iecy; &scy;&tcy;&rcy;&acy;&shcy;&ncy;&ycy;&iecy; &lcy;&yucy;&dcy;&icy; &dcy;&lcy;&yacy; &kcy;&ocy;&rcy;&rcy;&ucy;&pcy;&tscy;&icy;&ocy;&ncy;&iecy;&rcy;&ocy;&vcy; &scy;&tcy;&rcy;&acy;&ncy;&ycy;. &Bcy;&rcy;&yacy;&ncy;&scy;&kcy;&icy;&iecy;...
-              .post-item-top.clearfix
-                .post-item-top-data
-                  data(value='19.03.2017') 19.03.2017
-                  |  
-                  span ,
-                  |  
-                  time 15:24
+            each rpost, index in random
+              .aside-post-item
+                a(href="post/" + rpost.id) #{rpost.title}
+                .post-item-top.clearfix
+                  .post-item-top-data
+                    data(value='19.03.2017') #{rpost.date}

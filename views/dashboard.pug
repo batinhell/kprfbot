@@ -16,8 +16,14 @@ block content
             label(for='name') &Ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy;
             input#name.form-control.title(type='text')
           .form-group
+            label(for='short') Краткое содержание
+            textarea#short.form-control.short
+          .form-group
             label Контент
             #editor
+          .form-group
+            label(for='file') Выберите файл
+            input#file.form-control.file(type='file')
           |  
           button.btn.btn-default.save-post(type='submit') Сохранить
         

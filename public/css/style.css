@@ -108,12 +108,23 @@ header .header-bottom .container{
     transition: .4s;
     font-family: "GothamProBold";
 }
+.post-item-full{
+    line-height: 24px;
+    display: block;
+    color: #000;
+    transition: .4s;
+    font-family: "GothamProBold";
+    margin-top: 10px;
+    text-decoration: none!important;
+    margin-right: 10px;
+}
 .main-contant img{
     display: block;
     max-width: 100%;
     width: 100%;
     height: auto;
     padding-bottom: 35px;
+    max-height: 600px;
 }
 .container p{
     font-size: 14px;
@@ -123,6 +134,7 @@ header .header-bottom .container{
 }
 main{
     padding-top: 52px;
+    padding-bottom: 52px;
 }
 aside{
     float: right;
@@ -243,4 +255,19 @@ aside .aside-news .aside-post-item a:hover{
 }
 .menu-burger{
     display: none;
+}
+
+.bio {
+    margin-left: 50px;
+}
+
+.contacts > a {
+    color: #d94040;
+    outline: none;
+    text-decoration: none;
+}
+
+.contacts > a:hover {
+    color: #d94040;
+    cursor: pointer;
 }

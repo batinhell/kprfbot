@@ -1,0 +1,123 @@
+extends layout
+
+block content
+  body
+    #fb-root
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.8&appId=1348286358528633";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    header
+      .header-top
+        .container.clearfix
+          .header-social
+            a(href='')
+              i.fa.fa-facebook(aria-hidden='true')
+            a(href='')
+              i.fa.fa-vk(aria-hidden='true')
+            a(href='')
+              i.fa.fa-instagram(aria-hidden='true')
+            a(href='')
+              i.fa.fa-twitter(aria-hidden='true')
+            a(href='')
+              i.fa.fa-telegram(aria-hidden='true')
+            a(href='')
+              i.fa.fa-youtube-play(aria-hidden='true')
+            a(href='')
+              i.fa.fa-odnoklassniki(aria-hidden='true')
+          |  
+          a.logo(href='/') &Acy;&ncy;&dcy;&rcy;&iecy;&jcy; &Kcy;&lcy;&ycy;&chcy;&kcy;&ocy;&vcy;
+          .menu-burger
+            span
+            span
+            span
+        .mobile-menu
+          .container
+            .header-social
+              a(href='')
+                i.fa.fa-facebook(aria-hidden='true')
+              a(href='')
+                i.fa.fa-vk(aria-hidden='true')
+              a(href='')
+                i.fa.fa-instagram(aria-hidden='true')
+              a(href='')
+                i.fa.fa-twitter(aria-hidden='true')
+              a(href='')
+                i.fa.fa-telegram(aria-hidden='true')
+              a(href='')
+                i.fa.fa-youtube-play(aria-hidden='true')
+              a(href='')
+                i.fa.fa-odnoklassniki(aria-hidden='true')
+            nav
+              ul.clearfix
+                li
+                  a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+                li
+                  a(href='biography') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+                li
+                  a(href='#') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+                li
+                  a(href='#') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+                li
+                  a(href='#') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+      .header-bottom
+        .container.clearfix
+          nav
+            ul.clearfix
+              li
+                a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+              li.active
+                a(href='biography') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+              li
+                a(href='#') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+              li
+                a(href='#') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+              li.photo
+                a(href='/')
+                  img(src='images/img-1.png')
+              li
+                a(href='contacts.html') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+    main
+      section.container.clearfix
+        section.main-contant.contacts
+          a(href='http://kprf.ru', target='_blank') Официальный сайт КПРФ
+          br
+          a(href='http://www.rline.tv/', target='_blank') Телеканал "Красная линия"
+          br
+          a(href='https://www.youtube.com/user/CommunistPartyRF', target='_blank') Телеканал КПРФ ТВ
+          br
+          a(href='https://msk.kprf.ru/', target='_blank') Официальный сайт Московского городского Комитета КПРФ
+          br
+          a(href='http://pravo.kprf.ru/', target='_blank') Официальный сайт Юридической службы ЦК КПРФ
+          br
+          a(href='http://www.politpros.com/', target='_blank') Онлайн-журнал Политическое просвещение
+          br
+          a(href='http://www.gazeta-pravda.ru/', target='_blank') Газета "Правда"
+          br
+          a(href='http://pravdamoskvy.ru/', target='_blank') Газета "Правда Москвы"
+          br
+          a(href='http://www.duma.mos.ru/', target='_blank') Официальный сайт Московской городской Думы
+          br
+          br
+          p Тел. +7 (495) 623-05-10
+          a(href='mailto:klychkov@duma.mos.ru', target='_blank') E-mail: klychkov@duma.mos.ru
+        aside
+          .search
+            form.clearfix
+              input(type='text', name='search', placeholder='Поиск')
+              |  
+              input(type='submit')
+          .aside-news
+            .post-item-title &Scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &iecy;&shchcy;&iecy;
+            each rpost, index in random
+              .aside-post-item
+                a(href="post/" + rpost.id) #{rpost.title}
+                .post-item-top.clearfix
+                  .post-item-top-data
+                    data(value='19.03.2017') #{rpost.date}
+    script(src='js/jquery.js')
+    script(src='js/script.js')

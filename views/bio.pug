@@ -1,0 +1,123 @@
+extends layout
+
+block content
+  body
+    #fb-root
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.8&appId=1348286358528633";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    header
+      .header-top
+        .container.clearfix
+          .header-social
+            a(href='')
+              i.fa.fa-facebook(aria-hidden='true')
+            a(href='')
+              i.fa.fa-vk(aria-hidden='true')
+            a(href='')
+              i.fa.fa-instagram(aria-hidden='true')
+            a(href='')
+              i.fa.fa-twitter(aria-hidden='true')
+            a(href='')
+              i.fa.fa-telegram(aria-hidden='true')
+            a(href='')
+              i.fa.fa-youtube-play(aria-hidden='true')
+            a(href='')
+              i.fa.fa-odnoklassniki(aria-hidden='true')
+          |  
+          a.logo(href='/') &Acy;&ncy;&dcy;&rcy;&iecy;&jcy; &Kcy;&lcy;&ycy;&chcy;&kcy;&ocy;&vcy;
+          .menu-burger
+            span
+            span
+            span
+        .mobile-menu
+          .container
+            .header-social
+              a(href='')
+                i.fa.fa-facebook(aria-hidden='true')
+              a(href='')
+                i.fa.fa-vk(aria-hidden='true')
+              a(href='')
+                i.fa.fa-instagram(aria-hidden='true')
+              a(href='')
+                i.fa.fa-twitter(aria-hidden='true')
+              a(href='')
+                i.fa.fa-telegram(aria-hidden='true')
+              a(href='')
+                i.fa.fa-youtube-play(aria-hidden='true')
+              a(href='')
+                i.fa.fa-odnoklassniki(aria-hidden='true')
+            nav
+              ul.clearfix
+                li
+                  a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+                li
+                  a(href='biography') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+                li
+                  a(href='#') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+                li
+                  a(href='#') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+                li
+                  a(href='#') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+      .header-bottom
+        .container.clearfix
+          nav
+            ul.clearfix
+              li
+                a(href='/') &Ncy;&ocy;&vcy;&ocy;&scy;&tcy;&icy;
+              li.active
+                a(href='biography') &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+              li
+                a(href='#') &Vcy;&ocy;&lcy;&ocy;&ncy;&tcy;&iecy;&rcy;&acy;&mcy;
+              li
+                a(href='#') &Pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&acy;&tcy;&softcy;
+              li.photo
+                a(href='/')
+                  img(src='images/img-1.png')
+              li
+                a(href='/contacts') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+    main
+      section.container.clearfix
+        section.main-contant
+          article.post-item
+            h1.post-item-title &Bcy;&icy;&ocy;&gcy;&rcy;&acy;&fcy;&icy;&yacy;
+            .contant
+              p &Acy;&ncy;&dcy;&rcy;&iecy;&jcy; &IEcy;&vcy;&gcy;&iecy;&ncy;&softcy;&iecy;&vcy;&icy;&chcy; &Kcy;&lcy;&ycy;&chcy;&kcy;&ocy;&vcy; &rcy;&ocy;&dcy;&icy;&lcy;&scy;&yacy; 2 &scy;&iecy;&ncy;&tcy;&yacy;&bcy;&rcy;&yacy; 1979 &gcy;&ocy;&dcy;&acy; &vcy; &gcy;&ocy;&rcy;&ocy;&dcy;&iecy; &Kcy;&acy;&lcy;&icy;&ncy;&icy;&ncy;&gcy;&rcy;&acy;&dcy;&iecy;.
+              p &YUcy;&rcy;&icy;&scy;&tcy;, &scy;&pcy;&iecy;&tscy;&icy;&acy;&lcy;&icy;&scy;&tcy; &pcy;&ocy; &mcy;&iecy;&zhcy;&dcy;&ucy;&ncy;&acy;&rcy;&ocy;&dcy;&ncy;&ycy;&mcy; &ocy;&tcy;&ncy;&ocy;&shcy;&iecy;&ncy;&icy;&yacy;&mcy;.
+              p
+                | &Vcy; &icy;&yucy;&lcy;&iecy; 2001 &gcy;&ocy;&dcy;&acy; &vcy;&scy;&tcy;&ucy;&pcy;&icy;&lcy; &vcy; &Kcy;&ocy;&mcy;&mcy;&ucy;&ncy;&icy;&scy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&ucy;&yucy; &pcy;&acy;&rcy;&tcy;&icy;&yucy; &Rcy;&Fcy;. &Rcy;&acy;&bcy;&ocy;&tcy;&acy;&yacy; &vcy; &pcy;&acy;&rcy;&tcy;&icy;&icy;, &pcy;&rcy;&ocy;&shcy;&iecy;&lcy; &pcy;&ucy;&tcy;&softcy; &ocy;&tcy; &pcy;&ocy;&mcy;&ocy;&shchcy;&ncy;&icy;&kcy;&acy; &yucy;&rcy;&icy;&scy;&kcy;&ocy;&ncy;&scy;&ucy;&lcy;&softcy;&tcy;&acy; &dcy;&ocy; &zcy;&acy;&mcy;&iecy;&scy;&tcy;&icy;&tcy;&iecy;&lcy;&yacy; &rcy;&ucy;&kcy;&ocy;&vcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&yacy; &YUcy;&rcy;&icy;&dcy;&icy;&chcy;&iecy;&scy;&kcy;&ocy;&jcy; &scy;&lcy;&ucy;&zhcy;&bcy;&ycy; &TScy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&softcy;&ncy;&ocy;&gcy;&ocy; &kcy;&ocy;&mcy;&icy;&tcy;&iecy;&tcy;&acy; &Kcy;&Pcy;&Rcy;&Fcy;. &Vcy;&khcy;&ocy;&dcy;&icy;&lcy; &vcy; &scy;&ocy;&scy;&tcy;&acy;&vcy; &TScy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy; &icy;&zcy;&bcy;&icy;&rcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&jcy; &kcy;&ocy;&mcy;&icy;&scy;&scy;&icy;&icy; &Rcy;&ocy;&scy;&scy;&icy;&jcy;&scy;&kcy;&ocy;&jcy; &Fcy;&iecy;&dcy;&iecy;&rcy;&acy;&tscy;&icy;&icy;.
+              p
+                | &CHcy;&lcy;&iecy;&ncy; &Pcy;&rcy;&iecy;&zcy;&icy;&dcy;&icy;&ucy;&mcy;&acy; &TScy;&iecy;&ncy;&tcy;&rcy;&acy;&lcy;&softcy;&ncy;&ocy;&gcy;&ocy; &kcy;&ocy;&mcy;&icy;&tcy;&iecy;&tcy;&acy; &Kcy;&Pcy;&Rcy;&Fcy;, &scy;&iecy;&kcy;&rcy;&iecy;&tcy;&acy;&rcy;&softcy; &Mcy;&ocy;&scy;&kcy;&ocy;&vcy;&scy;&kcy;&ocy;&gcy;&ocy; &gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&ocy;&gcy;&ocy; &kcy;&ocy;&mcy;&icy;&tcy;&iecy;&tcy;&acy; &Kcy;&Pcy;&Rcy;&Fcy;.
+              p
+                | &Dcy;&iecy;&pcy;&ucy;&tcy;&acy;&tcy; &Mcy;&ocy;&scy;&kcy;&ocy;&vcy;&scy;&kcy;&ocy;&jcy; &gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&ocy;&jcy; &Dcy;&ucy;&mcy;&ycy; &pcy;&yacy;&tcy;&ocy;&gcy;&ocy; (2009-2014 &gcy;&gcy;.) &scy;&ocy;&zcy;&ycy;&vcy;&acy;. &Vcy;&ncy;&ocy;&vcy;&softcy; &icy;&zcy;&bcy;&rcy;&acy;&ncy; &dcy;&iecy;&pcy;&ucy;&tcy;&acy;&tcy;&ocy;&mcy; &Dcy;&ucy;&mcy;&ycy; 14 &scy;&iecy;&ncy;&tcy;&yacy;&bcy;&rcy;&yacy; 2014 &gcy;&ocy;&dcy;&acy;.
+              |  &Rcy;&ucy;&kcy;&ocy;&vcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&softcy; &fcy;&rcy;&acy;&kcy;&tscy;&icy;&icy; &Kcy;&Pcy;&Rcy;&Fcy; &vcy; &Mcy;&ocy;&scy;&gcy;&ocy;&rcy;&dcy;&ucy;&mcy;&iecy;. &Zcy;&acy;&mcy;&iecy;&scy;&tcy;&icy;&tcy;&iecy;&lcy;&softcy; &pcy;&rcy;&iecy;&dcy;&scy;&iecy;&dcy;&acy;&tcy;&iecy;&lcy;&yacy; &kcy;&ocy;&mcy;&icy;&scy;&scy;&icy;&icy; &pcy;&ocy; &dcy;&iecy;&lcy;&acy;&mcy; &ocy;&bcy;&shchcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ycy;&khcy; &ocy;&bcy;&hardcy;&iecy;&dcy;&icy;&ncy;&iecy;&ncy;&icy;&jcy; &icy; &rcy;&iecy;&lcy;&icy;&gcy;&icy;&ocy;&zcy;&ncy;&ycy;&khcy; &ocy;&rcy;&gcy;&acy;&ncy;&icy;&zcy;&acy;&tscy;&icy;&jcy;. &Vcy;&khcy;&ocy;&dcy;&icy;&tcy; &vcy; &scy;&ocy;&scy;&tcy;&acy;&vcy; &kcy;&ocy;&mcy;&icy;&scy;&scy;&icy;&jcy;:
+              ul.bio
+                li &pcy;&ocy; &gcy;&rcy;&acy;&dcy;&ocy;&scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&ucy;, &gcy;&ocy;&scy;&ucy;&dcy;&acy;&rcy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &scy;&ocy;&bcy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&icy; &icy; &zcy;&iecy;&mcy;&lcy;&iecy;&pcy;&ocy;&lcy;&softcy;&zcy;&ocy;&vcy;&acy;&ncy;&icy;&yucy;;
+                li &pcy;&ocy; &zcy;&acy;&kcy;&ocy;&ncy;&ocy;&dcy;&acy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&ucy;, &rcy;&iecy;&gcy;&lcy;&acy;&mcy;&iecy;&ncy;&tcy;&ucy;, &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy;&mcy; &icy; &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;&acy;&mcy;;
+                li
+                  | &ocy;&bcy;&hardcy;&iecy;&dcy;&icy;&ncy;&iecy;&ncy;&ncy;&ocy;&jcy; &kcy;&ocy;&mcy;&icy;&scy;&scy;&icy;&icy; &Mcy;&ocy;&scy;&kcy;&ocy;&vcy;&scy;&kcy;&ocy;&jcy; &gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&ocy;&jcy; &Dcy;&ucy;&mcy;&ycy; &icy; &Mcy;&ocy;&scy;&kcy;&ocy;&vcy;&scy;&kcy;&ocy;&jcy; &ocy;&bcy;&lcy;&acy;&scy;&tcy;&ncy;&ocy;&jcy; &Dcy;&ucy;&mcy;&ycy; &pcy;&ocy; &kcy;&ocy;&ocy;&rcy;&dcy;&icy;&ncy;&acy;&tscy;&icy;&icy; &zcy;&acy;&kcy;&ocy;&ncy;&ocy;&tcy;&vcy;&ocy;&rcy;&chcy;&iecy;&scy;&kcy;&ocy;&jcy; &dcy;&iecy;&yacy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&icy; &pcy;&ocy; &gcy;&ocy;&rcy;&ocy;&dcy;&scy;&kcy;&ocy;&mcy;&ucy; &khcy;&ocy;&zcy;&yacy;&jcy;&scy;&tcy;&vcy;&ucy; &icy; &zhcy;&icy;&lcy;&icy;&shchcy;&ncy;&ocy;&jcy; &pcy;&ocy;&lcy;&icy;&tcy;&icy;&kcy;&iecy;.
+              br
+              p &ZHcy;&iecy;&ncy;&acy;&tcy;, &icy;&mcy;&iecy;&iecy;&tcy; &dcy;&vcy;&ocy;&icy;&khcy; &scy;&ycy;&ncy;&ocy;&vcy;&iecy;&jcy;.
+              p
+                img(src='images/10.jpg')
+        aside
+          .search
+            form.clearfix
+              input(type='text', name='search', placeholder='Поиск')
+              |  
+              input(type='submit')
+          .aside-news
+            .post-item-title &Scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &iecy;&shchcy;&iecy;
+            each rpost, index in random
+              .aside-post-item
+                a(href="post/" + rpost.id) #{rpost.title}
+                .post-item-top.clearfix
+                  .post-item-top-data
+                    data(value='19.03.2017') #{rpost.date}
+    script(src='js/jquery.js')
+    script(src='js/script.js')

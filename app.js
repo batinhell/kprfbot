@@ -9,9 +9,20 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
+var moment = require('moment');
+// var upload = multer({ dest: 'uploads/' })
 var db = require('./config/db');
 
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
+})
+
+var upload = multer({ storage: storage })
 
 var url = 'mongodb://127.0.0.1/kprfbot';
 var options = { server: { socketOptions: { keepAlive: 1 } } };
@@ -43,6 +54,7 @@ app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'uploads')));
 
 app.use(require('express-session')({
     secret: 'keyboard secure cat',
@@ -55,19 +67,15 @@ app.use(passport.session());
 app.use('/', index);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
-// upload.single('image')
-app.post('/post', function (req, res, next) {
-  console.log(req.body)
+
+app.post('/post', upload.single('image'), function (req, res, next) {
+  req.body.image = req.file.originalname;
   Post.create(req.body, function(err, response) {
-    console.log(err)
-    console.log(response)
     if (err) { 
       res.status(500).send({error: err})
     }
     res.status(200).send()
   });
-  // req.file is the `avatar` file
-  // req.body will hold the text fields, if there were any
 });
 
 app.get('/post', function (req, res, next) {
@@ -84,7 +92,40 @@ app.get('/post/:id', function (req, res, next) {
     if (err) { 
       res.status(500).send({error: err})
     }
-    res.render('post', { post: response });
+    Post.aggregate([]).sample(3).exec(function(err, randomPosts) {
+      var random = randomPosts.map(function(post) {
+        var p = post;
+        p.date = moment(post.createdAt).format('DD.MM.YYYY, HH:mm');
+        return p;
+      });
+      var post = response;
+      post.date = moment(post.createdAt).format('DD.MM.YYYY, HH:mm');
+      res.render('post', { post: post, random: random });
+    });
+  });
+});
+
+app.get('/biography', function (req, res, next) {
+  Post.aggregate([]).sample(3).exec(function(err, randomPosts) {
+    var random = randomPosts.map(function(post) {
+      var p = post;
+      p.date = moment(post.createdAt).format('DD.MM.YYYY, HH:mm');
+      return p;
+    });
+
+    res.render('bio', { random: random });
+  });
+});
+
+app.get('/contacts', function (req, res, next) {
+  Post.aggregate([]).sample(3).exec(function(err, randomPosts) {
+    var random = randomPosts.map(function(post) {
+      var p = post;
+      p.date = moment(post.createdAt).format('DD.MM.YYYY, HH:mm');
+      return p;
+    });
+
+    res.render('contacts', { random: random });
   });
 });
 
