@@ -20,10 +20,11 @@ var saveBtn = document.querySelector('.save-post');
 saveBtn.addEventListener("click", function(e) {
   e.preventDefault();
   var data = new FormData();
-  // var params = {
-  //   title: title.value,
-  //   content: content.innerHTML
-  // }
+
+  if (!title.value || !content.innerHTML) {
+    return false;
+  }
+
   data.append('title', title.value);
   data.append('content', content.innerHTML);
   data.append('shortContent', shortContent.value);
