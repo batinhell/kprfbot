@@ -14,13 +14,11 @@ router.post('/', function(req, res, next) {
       successRedirect: '/dashboard',
       failureRedirect: '/qwe',
     }, function(err, user, info) {
-        console.log('error', err);
-        console.log('user', user);
         if (err) { return next(err); }
         if (!user) { return res.status(401).render('login'); }
         req.logIn(user, function(err) {
             if (err) { return next(err); }
-            return res.render('dashboard');
+            return res.redirect('/dashboard');
         });
     })(req, res, next);
 });

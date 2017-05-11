@@ -40,6 +40,14 @@ body {
   border: none;
 }
 
-.post {
+.post, .posts {
   margin-top: 65px;
+}
+.delete {
+  display: inline;
+  float: right;
+}
+.edit {
+  display: inline;
+  
 }

@@ -1,0 +1,16 @@
+extends admin
+
+block content
+  nav.navbar.navbar-default.navbar-fixed-top
+    .container
+      p.navbar-text.navbar-right
+        a.navbar-link(href='/login/logout') Выйти
+      p.navbar-text
+        a.navbar-link(href='/posts') Новости
+      p.navbar-text
+        a.navbar-link(href='/dashboard') Добавить новость
+
+  .container.posts
+    div.list-group
+      each post, index in posts
+        a.list-group-item(href="/post/" + post.id + "/edit") #{post.title}

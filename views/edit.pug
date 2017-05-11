@@ -13,23 +13,26 @@ block content
   .container.post
     .panel.panel-default
       .panel-heading
-        h3.panel-title Создать пост
+        h3.panel-title Редактировать пост
       .panel-body
-        form
+        form.edit(action='/post/' + post.id + '/update', method='post', onsubmit="return getContent()", enctype='multipart/form-data')
           .form-group
             label(for='name') &Ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy;
-            input#name.form-control.title(type='text')
+            input#name.form-control.title(type='text', value=post.title, name="title")
           .form-group
             label(for='short') Краткое содержание
-            textarea#short.form-control.short
+            textarea#short.form-control.short(rows=4, name="shortContent")=post.shortContent
+            textarea#content(style="display: none", name="content")
           .form-group
             label Контент
-            #editor
+            #editor(name="content")
+              | !{post.content}
           .form-group
             label(for='file') Выберите файл
-            input#file.form-control.file(type='file')
+            input#file.form-control.file(type='file', name="image")
           |  
           button.btn.btn-default.save-post(type='submit') Сохранить
+        form.delete(action='/post/' + post.id + '/delete', method='post')
+          button.btn.btn-danger.del-post(type='submit') Удалить
   script(src='https://cdn.quilljs.com/1.2.3/quill.js')
-  script(src='https://unpkg.com/axios/dist/axios.min.js')
-  script(src='js/app.js')
+  script(src='/js/edit.js')

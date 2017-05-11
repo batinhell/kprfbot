@@ -66,7 +66,7 @@ app.use(passport.session());
 
 app.use('/', index);
 app.use('/login', login);
-app.use('/dashboard', dashboard);
+app.use('/dashboard', Auth.isAuthenticated, dashboard);
 
 app.post('/post', upload.single('image'), function (req, res, next) {
   if (req.file) {
@@ -81,12 +81,43 @@ app.post('/post', upload.single('image'), function (req, res, next) {
   });
 });
 
-app.get('/post', function (req, res, next) {
+app.get('/posts', Auth.isAuthenticated, function (req, res, next) {
   Post.find({}, function(err, response) {
     if (err) { 
       res.status(500).send({error: err})
     }
-    res.render('post', { posts: response[0] });
+    res.render('posts', { posts: response });
+  });
+});
+
+app.get('/post/:id/edit', Auth.isAuthenticated, function (req, res, next) {
+  Post.findById(req.params.id, function(err, response) {
+    if (err) { 
+      res.status(500).send({error: err})
+    }
+    res.render('edit', { post: response });
+  });
+});
+
+app.post('/post/:id/delete', Auth.isAuthenticated, function (req, res, next) {
+  Post.remove({_id: req.params.id}, function(err, response) {
+    if (err) { 
+      res.status(500).send({error: err})
+    }
+    return res.redirect('/posts');
+  });
+});
+
+app.post('/post/:id/update', upload.single('image'), function (req, res, next) {
+  if (req.file) {
+    req.body.image = req.file.originalname;
+  }
+  Post.update({_id: req.params.id}, req.body, function(err, response) {
+    if (err) { 
+      console.log(err);
+      res.status(500).send({error: err})
+    }
+    return res.redirect('/posts');
   });
 });
 
